@@ -1,0 +1,29 @@
+# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
+# COCO 2017 dataset http://cocodataset.org
+# Example usage: python train.py --data coco.yaml
+# parent
+# ├── yolov5
+# └── datasets
+#     └── coco  ← downloads here
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: ../datasets/CrackDataset_DL_HY  # dataset root dir
+train: 
+  - images/AlligatorCrackTrain
+  - images/LongitudinalCrackTrain
+  - images/SealedCrackTrain
+  - images/TransverseCrackTrain
+val:
+  - images/LongitudinalCrackTest 
+  - images/AlligatorCrackTest 
+  - images/SealedCrackTest
+  - images/TransverseCrackTest
+test:   
+  - images/LongitudinalCrackTest 
+  - images/AlligatorCrackTest 
+  - images/SealedCrackTest
+  - images/TransverseCrackTest
+# Classes
+nc: 4  # number of classes
+names: ['AlligatorCrack','LongitudinalCrack','SealedCrack','TransverseCrack']  # class names
