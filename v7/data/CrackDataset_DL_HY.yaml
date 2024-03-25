@@ -1,0 +1,34 @@
+# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
+# PASCAL VOC dataset http://host.robots.ox.ac.uk/pascal/VOC
+# Example usage: python train.py --data VOC.yaml
+# parent
+# ├── yolov7
+# └── datasets
+#     └── VOC  ← downloads here
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: 
+train: # train images (relative to 'path')  16551 images
+
+   - ../datasets/CrackDataset_DL_HY/images_AlligatorCrackTrain_name.txt
+   - ../datasets/CrackDataset_DL_HY/images_LongitudinalCrackTrain_name.txt
+   - ../datasets/CrackDataset_DL_HY/images_SealedCrackTrain_name.txt
+   - ../datasets/CrackDataset_DL_HY/images_TransverseCrackTrain_name.txt
+val: # val images (relative to 'path')  4952 images
+   - ../datasets/CrackDataset_DL_HY/images_AlligatorCrackTest_name.txt
+   - ../datasets/CrackDataset_DL_HY/images_LongitudinalCrackTest_name.txt
+   - ../datasets/CrackDataset_DL_HY/images_SealedCrackTest_name.txt
+   - ../datasets/CrackDataset_DL_HY/images_TransverseCrackTest_name.txt
+test: # test images (optional)
+   - ../datasets/CrackDataset_DL_HY/images_AlligatorCrackTest_name.txt
+   - ../datasets/CrackDataset_DL_HY/images_LongitudinalCrackTest_name.txt
+   - ../datasets/CrackDataset_DL_HY/images_SealedCrackTest_name.txt
+   - ../datasets/CrackDataset_DL_HY/images_TransverseCrackTest_name.txt
+
+# Classes
+nc: 4  # number of classes
+names: ['AlligatorCrack','LongitudinalCrack','SealedCrack','TransverseCrack']  # class names
+
+
+
